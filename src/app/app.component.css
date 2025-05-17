@@ -1,0 +1,33 @@
+/* Center everything */
+:host {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+}
+
+/* Title styling */
+h2 {
+  text-align: center;
+  color: #1a73e8;
+  margin-bottom: 20px;
+}
+
+/* Navigation links if using router */
+nav {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #0078d4;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}

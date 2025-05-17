@@ -1,0 +1,24 @@
+<div class="card p-4 mb-4 shadow">
+  <h4 class="text-center">{{ isEditMode ? 'Update Flight' : 'Add New Flight' }}</h4>
+  <form (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label>Flight Number</label>
+      <input class="form-control" [(ngModel)]="flight.flightNumber" name="flightNumber" required>
+    </div>
+    <div class="mb-3">
+      <label>Destination</label>
+      <input class="form-control" [(ngModel)]="flight.destination" name="destination" required>
+    </div>
+    <div class="mb-3">
+      <label>Origin</label>
+      <input class="form-control" [(ngModel)]="flight.origin" name="origin" required>
+    </div>
+    <div class="mb-3">
+      <label>Departure Time</label>
+      <input class="form-control" type="datetime-local" [(ngModel)]="flight.departureTime" name="departureTime" required>
+    </div>
+    <button class="btn btn-primary w-100" type="submit">
+      {{ isEditMode ? 'Update' : 'Add' }} Flight
+    </button>
+  </form>
+</div>

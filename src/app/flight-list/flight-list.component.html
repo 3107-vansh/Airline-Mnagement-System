@@ -1,0 +1,26 @@
+<div class="card p-4 shadow">
+  <h4 class="text-center mb-3">Flight List</h4>
+  <table class="table table-bordered table-hover">
+    <thead class="table-light">
+      <tr>
+        <th>Flight Number</th>
+        <th>Destination</th>
+        <th>Origin</th>
+        <th>Departure Time</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let flight of flights">
+        <td>{{ flight.flightNumber }}</td>
+        <td>{{ flight.destination }}</td>
+        <td>{{ flight.origin }}</td>
+        <td>{{ flight.departureTime }}</td>
+        <td>
+          <button class="btn btn-sm btn-success me-1" (click)="editFlight(flight)">Edit</button>
+          <button class="btn btn-sm btn-danger" (click)="deleteFlight(flight.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

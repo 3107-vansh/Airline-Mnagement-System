@@ -1,0 +1,13 @@
+<div class="container mt-4">
+  <h2 class="text-center text-primary mb-4">Airline Management System</h2>
+
+  <!-- Optional Navigation -->
+  <nav class="mb-4 text-center">
+    <a routerLink="/add-flight" class="btn btn-outline-primary me-2">Add Flight</a>
+    <a routerLink="/list-flights" class="btn btn-outline-secondary">List Flights</a>
+  </nav>
+
+  <!-- Components -->
+  <app-flight-form [selectedFlight]="selectedFlight"></app-flight-form>
+  <app-flight-list (editSelectedFlight)="handleEditFlight($event)"></app-flight-list>
+</div>
